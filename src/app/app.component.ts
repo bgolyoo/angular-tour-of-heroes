@@ -14,6 +14,10 @@ export class AppComponent {
 
   constructor(private heroService: HeroService) { }
 
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
+
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
