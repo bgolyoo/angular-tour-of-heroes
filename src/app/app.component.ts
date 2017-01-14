@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from './shared/hero';
+import { Hero } from './shared/classes/hero';
 
 const HEROES: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
