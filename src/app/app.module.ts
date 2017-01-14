@@ -10,10 +10,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 
 import { HeroService } from './shared/services/hero.service';
 
-import { RouterModule } from '@angular/router';
-import { HeroesComponent } from './heroes/heroes.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,25 +22,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     HttpModule,
     HeroesModule,
     DashboardModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: '/dashboard',
-        pathMatch: 'full'
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent
-      },
-      {
-        path: 'heroes',
-        component: HeroesComponent
-      },
-      {
-        path: 'detail/:id',
-        component: HeroDetailComponent
-      }
-    ])
+    AppRoutingModule
   ],
   providers: [
     HeroService
