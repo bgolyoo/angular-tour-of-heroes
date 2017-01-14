@@ -13,6 +13,7 @@ import { HeroService } from './shared/services/hero.service';
 import { RouterModule } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       {
         path: 'heroes',
         component: HeroesComponent
+      },
+      {
+        path: 'detail/:id',
+        component: HeroDetailComponent
       }
     ])
   ],
