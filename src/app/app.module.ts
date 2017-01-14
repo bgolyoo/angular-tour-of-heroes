@@ -26,6 +26,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardModule,
     RouterModule.forRoot([
       {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+      },
+      {
         path: 'dashboard',
         component: DashboardComponent
       },
