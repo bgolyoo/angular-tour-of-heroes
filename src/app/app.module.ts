@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { HeroesModule } from './heroes/heroes.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 import { HeroService } from './shared/services/hero.service';
 
-import { HeroesComponent } from './heroes/heroes.component';
 import { RouterModule } from '@angular/router';
+import { HeroesComponent } from './heroes/heroes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,12 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     HttpModule,
     HeroesModule,
+    DashboardModule,
     RouterModule.forRoot([
+      {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
       {
         path: 'heroes',
         component: HeroesComponent
