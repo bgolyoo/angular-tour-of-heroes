@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
-import { HeroDetailModule } from './hero-detail/hero-detail.module';
 import { HeroesModule } from './heroes/heroes.module';
 
 import { HeroService } from './shared/services/hero.service';
@@ -18,7 +17,6 @@ import { HeroService } from './shared/services/hero.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    HeroDetailModule,
     HeroesModule
   ],
   providers: [
